@@ -14,7 +14,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD3FAItQMa4nv-8WVuMjFhWmMAcJjTV2bk"></meta-data>
+            android:value="AIzaSyD3FAItQMa4nv-8WVuMjFhWmMAcJjTV2bk" />
         <activity
             android:name=".MySubmissions"
             android:exported="false" />
