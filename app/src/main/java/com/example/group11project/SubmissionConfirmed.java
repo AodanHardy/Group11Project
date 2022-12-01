@@ -15,9 +15,6 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
     double lat;
     double lon;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +24,6 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
 
         SupportMapFragment mapFragment= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
         mapFragment.getMapAsync(this);
-
-
-
-
 
     }
 

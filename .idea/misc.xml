@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Group11Project/app/src/main/res/layout/activity_camera.xml" value="0.33" />
+        <entry key="..\:/Group11Project/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Group11Project/app/src/main/res/layout/activity_my_submissions.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group11Project/app/src/main/res/layout/activity_submission_confirmed.xml" value="0.36666666666666664" />
+        <entry key="..\:/Group11Project/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/Group11Project/app/src/main/res/menu/options_menu.xml" value="0.33" />
+        <entry key="..\:/Group11Project/app/src/main/res/menu/user_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/csf21haa/AndroidStudioProjects/Group11Project/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/csf21haa/AndroidStudioProjects/Group11Project/app/src/main/res/layout/activity_submission_confirmed.xml" value="0.358695652173913" />
         <entry key="..\:/Users/itf21mup/StudioProjects/Group11Project/app/src/main/res/drawable/user_icon.xml" value="0.1715" />
         <entry key="..\:/Users/itf21mup/StudioProjects/Group11Project/app/src/main/res/layout/activity_main.xml" value="0.5546875" />
         <entry key="..\:/Users/itf21mup/StudioProjects/Group11Project/app/src/main/res/menu/options_menu.xml" value="0.1" />
@@ -12,7 +18,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

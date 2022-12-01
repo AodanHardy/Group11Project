@@ -22,6 +22,7 @@ public class Camera extends AppCompatActivity {
     private static final int PERMISSION_CODE = 1234;
     private static final int CAPTURE_CODE = 1001;
     Button takePicture;
+    Button confirmPicture;
     ImageView cameraView;
     Uri image_uri;
 
@@ -30,6 +31,16 @@ public class Camera extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        confirmPicture = (Button) findViewById(R.id.btn_confirmImg);
+
+        confirmPicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Camera.this, SubmissionConfirmed.class);
+                startActivity(i);
+            }
+        });
 
         takePicture = findViewById(R.id.captureImage);
         cameraView = findViewById(R.id.imageView);
