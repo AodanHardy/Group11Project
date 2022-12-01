@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.MapView;
+
 public class SubmissionConfirmed extends AppCompatActivity {
 
     double lat;
     double lon;
+    MapView mapView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +21,8 @@ public class SubmissionConfirmed extends AppCompatActivity {
 
         lat = 57.927827;
         lon = -67.93722;
+
+
 
 
     }

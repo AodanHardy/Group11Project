@@ -8,65 +8,67 @@
 
     <Button
         android:id="@+id/btn_retake"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="147dp"
+        android:layout_height="72dp"
         android:layout_marginStart="29dp"
-        android:layout_marginEnd="81dp"
+        android:layout_marginEnd="235dp"
         android:layout_marginBottom="52dp"
         android:fontFamily="@font/ropa_sans"
         android:text="Retake"
         app:icon="@android:drawable/ic_menu_revert"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_confirmSubmit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_confirmSubmit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="123dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="257dp"
+        android:layout_marginTop="607dp"
         android:layout_marginEnd="31dp"
+        android:layout_marginBottom="52dp"
         android:fontFamily="@font/ropa_sans"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_retake"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_retake"
-        app:layout_constraintTop_toTopOf="@+id/btn_retake" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_cornfirmImage"
         android:layout_width="163dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/mapView"
+        android:layout_height="179dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
         app:srcCompat="@drawable/camera_icon" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        android:layout_width="411dp"
+        android:layout_height="179dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_cornfirmImage" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="229dp"
+        android:layout_height="179dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Comment"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/btn_retake"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_retake"
-        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
