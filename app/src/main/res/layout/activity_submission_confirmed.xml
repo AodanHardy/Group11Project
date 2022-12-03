@@ -8,10 +8,10 @@
 
     <Button
         android:id="@+id/btn_retake"
-        android:layout_width="147dp"
+        android:layout_width="0dp"
         android:layout_height="72dp"
         android:layout_marginStart="29dp"
-        android:layout_marginEnd="235dp"
+        android:layout_marginEnd="81dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="#D32727"
         android:fontFamily="@font/ropa_sans"
@@ -19,14 +19,14 @@
         app:icon="@android:drawable/ic_menu_revert"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirmSubmit"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
         android:id="@+id/btn_confirmSubmit"
-        android:layout_width="123dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="257dp"
-        android:layout_marginTop="607dp"
+        android:layout_width="103dp"
+        android:layout_height="75dp"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="#7ECD36"
@@ -34,16 +34,17 @@
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toEndOf="@+id/btn_retake"
+        app:layout_constraintTop_toBottomOf="@+id/maps" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/maps"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="304dp"
-        android:layout_height="349dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="242dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_confirmSubmit"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
