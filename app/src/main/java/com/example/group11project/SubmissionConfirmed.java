@@ -9,11 +9,14 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,6 +39,7 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
     boolean permissionGranted = false;
     LocationManager lm;
     LocationListener locationListener;
+    Button btnConfirmImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,15 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
 
         SupportMapFragment mapFragment= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
         mapFragment.getMapAsync(this);
+
+
+        btnConfirmImg = (Button) btnConfirmImg.findViewById(R.id.btn_confirmImg);
+        btnConfirmImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Intent i = new Intent(SubmissionConfirmed.this,)
+            }
+        });
 
 
 
