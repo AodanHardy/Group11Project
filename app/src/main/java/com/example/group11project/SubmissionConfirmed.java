@@ -40,6 +40,7 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
     LocationManager lm;
     LocationListener locationListener;
     Button btnConfirmLocation;
+    Button btnTakeAgain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,17 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
         btnConfirmLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent i = new Intent(SubmissionConfirmed.this,)
+                Intent i = new Intent(SubmissionConfirmed.this, SubmissionConfirmedSplashScreen.class);
+                startActivity(i);
+            }
+        });
+
+        btnTakeAgain = findViewById(R.id.btn_retake);
+        btnTakeAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SubmissionConfirmed.this, Camera.class);
+                startActivity(i);
             }
         });
 
