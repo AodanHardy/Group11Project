@@ -31,7 +31,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class SubmissionConfirmed extends AppCompatActivity implements OnMapReadyCallback{
     // Aodan
-    final String GOOGLE_MAP_API_KEY = "AIzaSyD3FAItQMa4nv-8WVuMjFhWmMAcJjTV2bk";
+
 
     private GoogleMap mMap;
 
