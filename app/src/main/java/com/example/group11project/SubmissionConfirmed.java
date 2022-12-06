@@ -39,7 +39,7 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
     boolean permissionGranted = false;
     LocationManager lm;
     LocationListener locationListener;
-    Button btnConfirmImg;
+    Button btnConfirmLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +51,13 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
         mapFragment.getMapAsync(this);
 
 
-        btnConfirmImg = (Button) btnConfirmImg.findViewById(R.id.btn_confirmImg);
-        btnConfirmImg.setOnClickListener(new View.OnClickListener() {
+        btnConfirmLocation = findViewById(R.id.btn_confirmSubmit);
+        btnConfirmLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Intent i = new Intent(SubmissionConfirmed.this,)
             }
         });
-
-
 
     }
 
