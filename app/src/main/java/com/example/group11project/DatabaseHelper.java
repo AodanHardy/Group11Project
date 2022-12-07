@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    // Aodan
 
     public static final String ISSUE_ID = "issueID";
     public static final String ISSUE_COMMENT = "issueComment";

@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.widget.TextView;
 
 public class SubmissionConfirmedSplashScreen extends AppCompatActivity {
+    // Aodan
     TextView reference;
 
 
@@ -28,7 +29,6 @@ public class SubmissionConfirmedSplashScreen extends AppCompatActivity {
             public void run() {
                 Intent i = new Intent(SubmissionConfirmedSplashScreen.this, MainActivity.class);
                 startActivity(i);
-
             }
         }, 3000);
 

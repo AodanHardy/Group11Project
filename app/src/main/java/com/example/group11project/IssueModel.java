@@ -3,6 +3,7 @@ package com.example.group11project;
 import com.google.android.gms.maps.model.LatLng;
 
 public class IssueModel {
+    // Aodan
     private int id;
     private String comment;
     LatLng position;
