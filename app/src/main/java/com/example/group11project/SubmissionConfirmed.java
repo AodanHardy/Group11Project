@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -41,11 +42,15 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
     LocationListener locationListener;
     Button btnConfirmLocation;
     Button btnTakeAgain;
+    TextView comment;
+    LatLng position;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submission_confirmed);
+        db = new DatabaseHelper(this);
 
 
         SupportMapFragment mapFragment= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
@@ -65,6 +70,13 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
         btnTakeAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                IssueModel issueModel;
+                comment  = findViewById(R.id.txtComment);
+
+                issueModel = new IssueModel(-1, comment.getText().toString(), position);
+                db.addRow(issueModel);
+
+
                 Intent i = new Intent(SubmissionConfirmed.this, Camera.class);
                 startActivity(i);
             }
@@ -133,6 +145,8 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
                 LatLng p = new LatLng(location.getLatitude(), location.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(p).title("Location"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(p, 12f));
+
+                position = p;
             }
         }
 

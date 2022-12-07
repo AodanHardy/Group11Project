@@ -54,7 +54,7 @@
     </androidx.fragment.app.FragmentContainerView>
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/txtComment"
         android:layout_width="229dp"
         android:layout_height="179dp"
         android:ems="10"
