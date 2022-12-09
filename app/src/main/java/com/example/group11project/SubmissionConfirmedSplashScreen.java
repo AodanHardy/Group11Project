@@ -18,12 +18,6 @@ public class SubmissionConfirmedSplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submission_confirmed_splash_screen);
 
-
-
-
-        reference = findViewById(R.id.txtSplashScreenReference);
-        reference.setText("test");
-
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -31,7 +25,6 @@ public class SubmissionConfirmedSplashScreen extends AppCompatActivity {
                 startActivity(i);
             }
         }, 3000);
-
 
     }
 }
