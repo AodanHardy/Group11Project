@@ -19,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table issues(issueID int primary key autoincrement, issueComment text, issuePosition text)");
+        db.execSQL("Create table issues(issueID INTEGER PRIMARY KEY AUTOINCREMENT, issueComment text, issuePosition text)");
 
     }
 

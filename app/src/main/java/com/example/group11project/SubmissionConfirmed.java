@@ -73,7 +73,7 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
                 IssueModel issueModel;
                 comment  = findViewById(R.id.txtComment);
 
-                issueModel = new IssueModel(-1, comment.getText().toString(), position);
+                issueModel = new IssueModel(comment.getText().toString(), position);
                 db.addRow(issueModel);
 
 
