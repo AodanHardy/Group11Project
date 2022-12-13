@@ -7,11 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Aodan
-
-    public static final String ISSUE_ID = "issueID";
-    public static final String ISSUE_COMMENT = "issueComment";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, "Issues.db", null, 1);
@@ -19,7 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table issues(issueID INTEGER PRIMARY KEY AUTOINCREMENT, issueComment text, issuePosition text)");
+        db.execSQL("CREATE TABLE \"issues\" (\"issueID\" INTEGER NOT NULL UNIQUE,\"issueComment\"\tTEXT NOT NULL,\"issuePosition\"TEXT NOT NULL,\"issueDate\"TEXT NOT NULL,PRIMARY KEY(\"issueID\" AUTOINCREMENT));");
 
     }
 
@@ -29,15 +30,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean addRow(IssueModel issueModel){
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         String position = issueModel.getPosition().toString();
 
-        cv.put("comment", issueModel.getComment());
-        cv.put("position", position);
-
-
+        cv.put("issueComment", issueModel.getComment());
+        cv.put("issuePosition", position);
+        cv.put("issueDate", issueModel.getDate());
 
         long insert = db.insert("issues", null, cv);
         if (insert == -1){

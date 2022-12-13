@@ -61,6 +61,14 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
         btnConfirmLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                IssueModel issueModel;
+                comment  = findViewById(R.id.txtComment);
+
+                issueModel = new IssueModel(comment.getText().toString(), position);
+                db.addRow(issueModel);
+
+
                 Intent i = new Intent(SubmissionConfirmed.this, SubmissionConfirmedSplashScreen.class);
                 startActivity(i);
             }
@@ -70,11 +78,6 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
         btnTakeAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                IssueModel issueModel;
-                comment  = findViewById(R.id.txtComment);
-
-                issueModel = new IssueModel(comment.getText().toString(), position);
-                db.addRow(issueModel);
 
 
                 Intent i = new Intent(SubmissionConfirmed.this, Camera.class);
