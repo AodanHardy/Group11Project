@@ -2,13 +2,16 @@ package com.example.group11project;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TableRow;
 
 import androidx.annotation.Nullable;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -44,6 +47,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
 
         }else return true;
+
+    }
+
+    int getLastRef(){
+        int ref = -1;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues cv = new ContentValues();
+
+        Cursor ids = db.rawQuery("SELECT issueID FROM issues WHERE issueID=(SELECT max(issueID) FROM issues)",null);
+        if (ids.moveToFirst() && ids.getCount()>0){
+            ref = ids.getInt(0);
+        }
+        return ref;
 
     }
 }

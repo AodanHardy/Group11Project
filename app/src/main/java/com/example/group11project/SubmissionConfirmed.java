@@ -70,6 +70,9 @@ public class SubmissionConfirmed extends AppCompatActivity implements OnMapReady
 
 
                 Intent i = new Intent(SubmissionConfirmed.this, SubmissionConfirmedSplashScreen.class);
+
+
+
                 startActivity(i);
             }
         });
