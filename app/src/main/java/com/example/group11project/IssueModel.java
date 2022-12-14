@@ -8,20 +8,31 @@ import java.util.Date;
 
 public class IssueModel {
     // Aodan
-
+    private int id = 0;
     private String comment;
-    private LatLng position;
+    private String position;
     private String date;
 
 
-    public IssueModel(String comment, LatLng position){
+    public IssueModel(String comment, String position){
         this.comment = comment;
         this.position = position;
         this.setDate();
     }
 
+    public IssueModel(int id, String comment, String position, String date){
+        this.id = id;
+        this.comment = comment;
+        this.position = position;
+        this.date = date;
+    }
+
     public String getDate() {
         return date;
+    }
+    public int getId(){
+
+        return id;
     }
 
     public void setDate() {
@@ -30,13 +41,13 @@ public class IssueModel {
         this.date = dateFormat.format(DATE);
     }
 
-    public IssueModel(){}
+
 
     public String getComment() {
         return comment;
     }
 
-    public LatLng getPosition() {
+    public String getPosition() {
         return position;
     }
 
@@ -44,7 +55,7 @@ public class IssueModel {
         this.comment = comment;
     }
 
-    public void setPosition(LatLng position) {
+    public void setPosition(String position) {
         this.position = position;
     }
 }

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.inputmethodservice.Keyboard;
 import android.widget.TableRow;
 
 import androidx.annotation.Nullable;
@@ -54,13 +55,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         int ref = -1;
 
         SQLiteDatabase db = this.getReadableDatabase();
-        ContentValues cv = new ContentValues();
+
 
         Cursor ids = db.rawQuery("SELECT issueID FROM issues WHERE issueID=(SELECT max(issueID) FROM issues)",null);
         if (ids.moveToFirst() && ids.getCount()>0){
             ref = ids.getInt(0);
         }
         return ref;
+    }
+
+    ArrayList<IssueModel> getArrayOfIssues(){
+        ArrayList<IssueModel>issues;
+        issues = new ArrayList<>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor issueCursor = db.rawQuery("SELECT issueID, issuePosition, issueComment, issueDate FROM issues",null);
+
+
+        if (issueCursor.getCount()!=0){
+            while (issueCursor.moveToNext()){
+                int id = issueCursor.getInt(0);
+                String position = issueCursor.getString(2);
+                String comment = issueCursor.getString(3);
+                String date = issueCursor.getString(3);
+
+                IssueModel issueModel = new IssueModel(id, position, comment, date);
+
+                issues.add(issueModel);
+            }
+        }
+        return issues;
+
+
 
     }
+
+
 }
