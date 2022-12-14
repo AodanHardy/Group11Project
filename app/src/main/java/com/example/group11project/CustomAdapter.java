@@ -46,13 +46,11 @@ public class CustomAdapter extends BaseAdapter {
 
         TextView subId = (TextView)convertView.findViewById(R.id.submissions_id);
         TextView subComment = (TextView)convertView.findViewById(R.id.submissions_comment);
-        //TextView subPos = (TextView)convertView.findViewById(R.id.submissions_position);
         TextView subDate = (TextView)convertView.findViewById(R.id.submissions_date);
 
 
-        subId.setText(""+tempIssue.getId());
+        subId.setText("#"+tempIssue.getId());
         subComment.setText(tempIssue.getComment());
-        //subPos.setText(tempIssue.getPosition());
         subDate.setText(tempIssue.getDate());
 
 

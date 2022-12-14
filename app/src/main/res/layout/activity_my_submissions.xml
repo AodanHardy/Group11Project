@@ -7,13 +7,16 @@
     tools:context=".MySubmissions">
 
 
+
+
     <ListView
         android:id="@+id/lst_mysubmissions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="3dp"
+        android:divider="@color/black"
         android:dividerHeight="3dp"
-        android:divider="@color/black"/>
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
