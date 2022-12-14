@@ -23,7 +23,7 @@ public class SubmissionConfirmedSplashScreen extends AppCompatActivity {
 
 
         reference = findViewById(R.id.txtRefNo);
-        String s_reference = String.format("REF#`%d", refNo);
+        String s_reference = String.format("REF#%d", refNo);
         reference.setText(s_reference);
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
